@@ -19,7 +19,7 @@
             <Button fx:id="btEquals" mnemonicParsing="false" onAction="#btEqualsController" prefWidth="50.0" text="=" />
          </children>
       </HBox>
-      <TextField fx:id="tfResult" disable="true" promptText="Result" />
+      <TextField fx:id="tfResult" editable="false" promptText="Result" />
       <Text fx:id="info" strokeType="OUTSIDE" strokeWidth="0.0" text="log USE: first insert the Base, then the argument." wrappingWidth="299.13671875" />
    </children>
 </VBox>

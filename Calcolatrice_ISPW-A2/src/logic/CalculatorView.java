@@ -133,9 +133,7 @@ public class CalculatorView extends Application {
 			Float result;
 			try {
 				result = controller.doOperations(bean);
-				String temp = tfResult.getText() + bean.getSecondMember() + "=" + result;
-				tfResult.setText(temp);
-
+				printResult(result);
 			} catch (Exception e) {
 				info.setText(e.getMessage());
 			} finally {
@@ -146,6 +144,16 @@ public class CalculatorView extends Application {
 			info.setText("You have to insert the second number first!");
 		}
 
+	}
+	
+	public void printResult(Float result) {
+		String temp;
+		if(bean.getOperation().equals(Status.LOG)) {
+			temp = tfResult.getText()+"("+bean.getSecondMember()+")"+"=" + result;
+		}else{
+			temp = tfResult.getText() + bean.getSecondMember() + "=" + result;
+		}
+		tfResult.setText(temp);
 	}
 
 }
